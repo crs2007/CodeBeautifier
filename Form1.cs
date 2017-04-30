@@ -1,4 +1,22 @@
-﻿using System;
+﻿/*
+ * Thanks for taking the time to check out my meager app.
+ * It's not rocket science. I wrote it for my specific use 
+ * case, which is pretty simple. There is a short blog
+ * article about it here:
+ *      https://itsalljustelectrons.blogspot.com/2017/04/Code-Beautifier.html
+ * And of course, the GitHub repo is here:
+ *      https://github.com/BeginTry/CodeBeautifier
+ *      
+ * LICENSE
+ * Um, I don't know. Legal stuff is a PITA. Just be considerate and
+ * use common sense. I shared the code. If you can use it, great. 
+ * If you want to add to the code, edit the code, or share it with 
+ * others...please include one (or both) of the links above. 
+ * A follow on Twitter would be nice, too: 
+ *      https://twitter.com/BeginTry
+*/
+
+using System;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;

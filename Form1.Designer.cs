@@ -48,6 +48,7 @@
             // 
             // rtCode
             // 
+            this.rtCode.AcceptsTab = true;
             this.rtCode.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtCode.Location = new System.Drawing.Point(3, 3);
             this.rtCode.Name = "rtCode";
