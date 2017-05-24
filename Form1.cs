@@ -58,13 +58,13 @@ namespace CodeBeautifier
                 StringBuilder sb = new StringBuilder();
                 SelectedRichText lastSelection = new SelectedRichText(null, Color.Empty, Color.Empty);
 
+                sb.Append("<p style = \"font-family: Consolas; font-size: 12px\">");
                 rtCode.Select(0, 1);
                 AppendOpeningSpanTag(lastSelection, sb);
 
                 lastSelection.Font = rtCode.SelectionFont;
                 lastSelection.BackColor = rtCode.SelectionBackColor;
                 lastSelection.ForeColor = rtCode.SelectionColor;
-
                 //Iterate through characters.
                 for (int i = 0; i < rtCode.Text.Length; i++)
                 {
@@ -84,15 +84,19 @@ namespace CodeBeautifier
                         lastSelection.BackColor = rtCode.SelectionBackColor;
                         lastSelection.ForeColor = rtCode.SelectionColor;
                     }
-
+                    if (rtCode.SelectedText == "\n")
+                        sb.Append("<br>");
+                    if (rtCode.SelectedText == "\t")
+                        sb.Append("&nbsp;&nbsp;&nbsp;");
                     sb.Append(rtCode.SelectedText);
                 }
 
                 sb.Append("</span>");
-
+                sb.Append("</p>");
                 txtCode.Text = sb.ToString();
                 txtCode.SelectAll();
                 Clipboard.SetText(txtCode.Text);
+                tabControl1.SelectedIndex = 1;
             }
             catch(Exception ex)
             {

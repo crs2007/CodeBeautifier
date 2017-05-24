@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.rtCode = new System.Windows.Forms.RichTextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.btnBeautify = new System.Windows.Forms.Button();
@@ -59,6 +60,7 @@
             // txtCode
             // 
             this.txtCode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCode.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCode.Location = new System.Drawing.Point(3, 3);
             this.txtCode.Multiline = true;
             this.txtCode.Name = "txtCode";
@@ -185,6 +187,7 @@
             this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnBeautify);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Code Beautifier";
